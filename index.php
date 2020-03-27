@@ -17,7 +17,7 @@ require 'config/loader_models.php';
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
-    <script src="Assets/script.js"></script>
+
 
 </head>
 
@@ -41,7 +41,12 @@ require 'config/loader_models.php';
 
     if (isset($_SESSION['is_logged'])) {
 
-        echo "logged";
+        if (isset($_GET['view']) && $_GET['view'] == 'newTask') {
+
+            include 'view/newTask.php';
+        } else {
+            include 'view/tasks.php';
+        }
     } else {
 
         if (isset($_GET['view']) && $_GET['view'] == 'register') {

@@ -9,7 +9,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="index.html"> ToDo Tasks</a>
+        <a class="navbar-brand" href="index.php"> ToDo Tasks</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,12 +19,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link" style="color: white" href="">Tasks</a>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link" style="color: white" href="">Tasks</a>
+                    <a class="nav-link" style="color: white" href="index.php?view=newTask">Create Task</a>
                 </li>
 
                 <li class="nav-item d-none d-sm-block">
