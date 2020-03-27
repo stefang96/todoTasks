@@ -9,7 +9,7 @@ class Task
         try {
 
 
-            $upit = "Select * from tasks";
+            $upit = "SELECT * FROM tasks";
 
             $query = database::connection()->prepare($upit);
             $query->execute();
@@ -22,6 +22,48 @@ class Task
             echo 'Caught exception: ', $e->getMessage(), "\n";
         }
     }
+
+    public function delete($id)
+    {
+        try {
+
+
+            $upit = "DELETE FROM tasks WHERE id=" . $id;
+
+            $query = database::connection()->prepare($upit);
+
+            if ($query->execute()) {
+
+                return true;
+            }
+
+
+            return false;
+        } catch (Exception $e) {
+            echo 'Caught exception: ', $e->getMessage(), "\n";
+        }
+    }
+
+    public function getTask($id)
+    {
+        try {
+
+
+            $upit = "Select * FROM tasks WHERE id=" . $id;
+
+            $query = database::connection()->prepare($upit);
+
+            $query->execute();
+
+            return $query->fetchAll();;
+
+
+            return false;
+        } catch (Exception $e) {
+            echo 'Caught exception: ', $e->getMessage(), "\n";
+        }
+    }
+
 
 
     public function create($data)

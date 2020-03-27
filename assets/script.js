@@ -218,3 +218,7 @@ console.log($(".id2").length);
 
 console.log($(".id1").length);
 console.log($(".id3").length);
+
+function detailsModal(id) {
+  $("#detailsModal").modal();
+}
