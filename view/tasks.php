@@ -28,7 +28,7 @@ foreach ($result as $t) {
 
 
     <br>
-    <h1>ToDd Tasks</h1>
+    <h1>ToDo Tasks</h1>
     <br>
 
     <div class="row">

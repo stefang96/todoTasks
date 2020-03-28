@@ -5,6 +5,17 @@ $task = new Task();
 $result =  $task->getTask($_GET['id']);
 
 //implement edit with database
+if (isset($_POST['title']) && isset($_POST['date']) && isset($_POST['description'])) {
+
+
+
+    $task = new Task();
+    $result =  $task->edit($_GET['id'], $_POST);
+
+    if ($result) {
+        header('Location: index.php');
+    }
+}
 
 
 ?>
@@ -20,7 +31,8 @@ $result =  $task->getTask($_GET['id']);
         <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label">Title</label>
             <div class="col-sm-10">
-                <textarea class="form-control" rows="1" name="title" placeholder="Title"> <?php echo $result[0]['title'] ?> </textarea>
+                <input class="form-control" type="text" name="title" value="<?php echo $result[0]['title'] ?>" placeholder="Title" />
+
             </div>
         </div>
         <div class="form-group row">
@@ -58,7 +70,7 @@ $result =  $task->getTask($_GET['id']);
 
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Description</label>
-            <textarea class="form-control" name="description" rows="5">
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="5">
             <?php echo $result[0]['description'] ?>
             </textarea>
         </div>
