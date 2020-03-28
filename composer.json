@@ -1,10 +1,10 @@
 {
-    "name": "wcode_stefang/todo-tasks",
-    "authors": [
-        {
-            "name": "stefanG96",
-            "email": "stefan.grujicic@waltercode.com"
-        }
-    ],
-    "require": {}
+  "name": "wcode_stefang/todo-tasks",
+  "authors": [
+    {
+      "name": "stefanG96",
+      "email": "stefangrujicic996@gmail.com"
+    }
+  ],
+  "require": {}
 }
